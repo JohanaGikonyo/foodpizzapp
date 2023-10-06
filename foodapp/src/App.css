@@ -1,0 +1,47 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.menus img{
+height: 200px;
+width: 200px;
+}
+.menus{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 50px;
+  margin: 50px;
+  
+}
+
+.menu2{
+  background-color: azure;
+  border-radius: 20px;
+}
+.menu2:hover{
+  background-color: black;
+  transform: translate(5px, 5px);
+  color: white;
+}
+.images{
+  border-radius: 50%;
+  background-color: none;
+  margin: 5px;
+}
+.menu2  em:nth-child(even) {
+  background-color: lightgray;
+  color: goldenrod;
+}
+
+/* Style every odd item with a background color of light blue */
+.menu2 em:nth-child(odd) {
+  
+  color: red;
+}
+.menu2 em:hover:nth-child(odd){
+  color: white;
+}
+

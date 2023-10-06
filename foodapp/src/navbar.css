@@ -1,0 +1,63 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    background-color: #5b78c7;
+    height: 10vh;
+}
+nav .links a{
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+nav .links a:hover{
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: orange;
+}
+@media screen and (max-width:480px){
+    nav{
+        position: relative;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+    .lines{
+        position: absolute;
+        cursor: pointer;
+        right: 5px;
+        top: 20px;
+        z-index: 2;
+        transform: translate(-5% -50%);
+    }
+    .links{
+        position: fixed;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        display: none;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out ;
+    }
+    .links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .links a{
+        font-size: 25px;
+        opacity: 0;
+    }
+    
+}
